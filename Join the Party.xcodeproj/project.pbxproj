@@ -17,7 +17,14 @@
 		900FD61527DEA9E6006F9C3C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 900FD61427DEA9E6006F9C3C /* GoogleService-Info.plist */; };
 		900FD61827DEAAB9006F9C3C /* Start.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900FD61727DEAAB9006F9C3C /* Start.swift */; };
 		900FD61A27DEAB2B006F9C3C /* Intro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900FD61927DEAB2B006F9C3C /* Intro.swift */; };
-		900FD61C27DEAB68006F9C3C /* Battle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900FD61B27DEAB68006F9C3C /* Battle.swift */; };
+		900FD61C27DEAB68006F9C3C /* Battles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900FD61B27DEAB68006F9C3C /* Battles.swift */; };
+		900FD61E27DEAD23006F9C3C /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900FD61D27DEAD23006F9C3C /* Menu.swift */; };
+		900FD62027DEAD3F006F9C3C /* Progress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900FD61F27DEAD3F006F9C3C /* Progress.swift */; };
+		900FD62227DEAD5E006F9C3C /* Restart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900FD62127DEAD5E006F9C3C /* Restart.swift */; };
+		900FD62427DEADA2006F9C3C /* CapTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900FD62327DEADA2006F9C3C /* CapTable.swift */; };
+		900FD62627DEAEC8006F9C3C /* NewInvestor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900FD62527DEAEC8006F9C3C /* NewInvestor.swift */; };
+		900FD62827DEAF42006F9C3C /* InvestorDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900FD62727DEAF41006F9C3C /* InvestorDetail.swift */; };
+		900FD62A27DEAF81006F9C3C /* InvestDex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900FD62927DEAF81006F9C3C /* InvestDex.swift */; };
 		9020A1B827DC088000DEBD79 /* partymonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9020A1B727DC088000DEBD79 /* partymonApp.swift */; };
 		9020A1BA27DC088000DEBD79 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9020A1B927DC088000DEBD79 /* ContentView.swift */; };
 		9020A1BC27DC088100DEBD79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9020A1BB27DC088100DEBD79 /* Assets.xcassets */; };
@@ -29,12 +36,12 @@
 		9020A1D127DC1B4B00DEBD79 /* GameboyControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9020A1D027DC1B4B00DEBD79 /* GameboyControls.swift */; };
 		9020A1D427DC1F4E00DEBD79 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9020A1D327DC1F4E00DEBD79 /* Extensions.swift */; };
 		9020A1D627DC1F7B00DEBD79 /* LayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9020A1D527DC1F7B00DEBD79 /* LayoutManager.swift */; };
-		90F19D4D27DD212800144521 /* CapTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F19D4C27DD212800144521 /* CapTable.swift */; };
+		90F19D4D27DD212800144521 /* CapTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F19D4C27DD212800144521 /* CapTableView.swift */; };
 		90F19D4F27DD22ED00144521 /* RestartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F19D4E27DD22ED00144521 /* RestartView.swift */; };
 		90F19D5127DD276000144521 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F19D5027DD276000144521 /* MenuView.swift */; };
 		90F19D5327DD2C0700144521 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F19D5227DD2C0700144521 /* ProgressView.swift */; };
+		90FBE4B527DEDA4100191E8D /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FBE4B427DEDA4100191E8D /* FontManager.swift */; };
 		90FDF31B27DC252200F627BE /* PKMN_RBYGSC.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 90FDF31A27DC250C00F627BE /* PKMN_RBYGSC.ttf */; };
-		90FDF31E27DC26D400F627BE /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FDF31D27DC26D400F627BE /* FontManager.swift */; };
 		90FDF32127DC2F4600F627BE /* GameboyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FDF32027DC2F4600F627BE /* GameboyButton.swift */; };
 		90FDF32327DC327000F627BE /* GameboyNumpad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FDF32227DC327000F627BE /* GameboyNumpad.swift */; };
 		90FDF32A27DC423400F627BE /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FDF32927DC423400F627BE /* StartView.swift */; };
@@ -43,7 +50,7 @@
 		90FDF33127DC484400F627BE /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FDF33027DC484400F627BE /* Store.swift */; };
 		90FDF33427DC48AF00F627BE /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FDF33327DC48AF00F627BE /* State.swift */; };
 		90FDF33627DC4EF900F627BE /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FDF33527DC4EF900F627BE /* IntroView.swift */; };
-		90FDF33827DC4F3400F627BE /* InvestDex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FDF33727DC4F3400F627BE /* InvestDex.swift */; };
+		90FDF33827DC4F3400F627BE /* InvestDexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FDF33727DC4F3400F627BE /* InvestDexView.swift */; };
 		90FDF33A27DC565300F627BE /* Share.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FDF33927DC565300F627BE /* Share.swift */; };
 		90FDF33C27DC614500F627BE /* InvestorItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FDF33B27DC614500F627BE /* InvestorItem.swift */; };
 		90FDF33E27DC660700F627BE /* InvestorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FDF33D27DC660700F627BE /* InvestorModel.swift */; };
@@ -61,7 +68,14 @@
 		900FD61427DEA9E6006F9C3C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		900FD61727DEAAB9006F9C3C /* Start.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Start.swift; sourceTree = "<group>"; };
 		900FD61927DEAB2B006F9C3C /* Intro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intro.swift; sourceTree = "<group>"; };
-		900FD61B27DEAB68006F9C3C /* Battle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Battle.swift; sourceTree = "<group>"; };
+		900FD61B27DEAB68006F9C3C /* Battles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Battles.swift; sourceTree = "<group>"; };
+		900FD61D27DEAD23006F9C3C /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		900FD61F27DEAD3F006F9C3C /* Progress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Progress.swift; sourceTree = "<group>"; };
+		900FD62127DEAD5E006F9C3C /* Restart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restart.swift; sourceTree = "<group>"; };
+		900FD62327DEADA2006F9C3C /* CapTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapTable.swift; sourceTree = "<group>"; };
+		900FD62527DEAEC8006F9C3C /* NewInvestor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewInvestor.swift; sourceTree = "<group>"; };
+		900FD62727DEAF41006F9C3C /* InvestorDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestorDetail.swift; sourceTree = "<group>"; };
+		900FD62927DEAF81006F9C3C /* InvestDex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestDex.swift; sourceTree = "<group>"; };
 		9020A1B427DC088000DEBD79 /* partymon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = partymon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9020A1B727DC088000DEBD79 /* partymonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = partymonApp.swift; sourceTree = "<group>"; };
 		9020A1B927DC088000DEBD79 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -74,13 +88,13 @@
 		9020A1D027DC1B4B00DEBD79 /* GameboyControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameboyControls.swift; sourceTree = "<group>"; };
 		9020A1D327DC1F4E00DEBD79 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		9020A1D527DC1F7B00DEBD79 /* LayoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutManager.swift; sourceTree = "<group>"; };
-		90F19D4C27DD212800144521 /* CapTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapTable.swift; sourceTree = "<group>"; };
+		90F19D4C27DD212800144521 /* CapTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapTableView.swift; sourceTree = "<group>"; };
 		90F19D4E27DD22ED00144521 /* RestartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestartView.swift; sourceTree = "<group>"; };
 		90F19D5027DD276000144521 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		90F19D5227DD2C0700144521 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		90FBE4B427DEDA4100191E8D /* FontManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
 		90FDF31A27DC250C00F627BE /* PKMN_RBYGSC.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = PKMN_RBYGSC.ttf; path = PKMN/PKMN_RBYGSC.ttf; sourceTree = SOURCE_ROOT; };
 		90FDF31C27DC256600F627BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		90FDF31D27DC26D400F627BE /* FontManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
 		90FDF32027DC2F4600F627BE /* GameboyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameboyButton.swift; sourceTree = "<group>"; };
 		90FDF32227DC327000F627BE /* GameboyNumpad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameboyNumpad.swift; sourceTree = "<group>"; };
 		90FDF32927DC423400F627BE /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
@@ -89,7 +103,7 @@
 		90FDF33027DC484400F627BE /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		90FDF33327DC48AF00F627BE /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		90FDF33527DC4EF900F627BE /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
-		90FDF33727DC4F3400F627BE /* InvestDex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestDex.swift; sourceTree = "<group>"; };
+		90FDF33727DC4F3400F627BE /* InvestDexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestDexView.swift; sourceTree = "<group>"; };
 		90FDF33927DC565300F627BE /* Share.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Share.swift; sourceTree = "<group>"; };
 		90FDF33B27DC614500F627BE /* InvestorItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestorItem.swift; sourceTree = "<group>"; };
 		90FDF33D27DC660700F627BE /* InvestorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestorModel.swift; sourceTree = "<group>"; };
@@ -123,7 +137,14 @@
 			children = (
 				900FD61727DEAAB9006F9C3C /* Start.swift */,
 				900FD61927DEAB2B006F9C3C /* Intro.swift */,
-				900FD61B27DEAB68006F9C3C /* Battle.swift */,
+				900FD61B27DEAB68006F9C3C /* Battles.swift */,
+				900FD61D27DEAD23006F9C3C /* Menu.swift */,
+				900FD61F27DEAD3F006F9C3C /* Progress.swift */,
+				900FD62127DEAD5E006F9C3C /* Restart.swift */,
+				900FD62327DEADA2006F9C3C /* CapTable.swift */,
+				900FD62527DEAEC8006F9C3C /* NewInvestor.swift */,
+				900FD62727DEAF41006F9C3C /* InvestorDetail.swift */,
+				900FD62927DEAF81006F9C3C /* InvestDex.swift */,
 			);
 			path = Logic;
 			sourceTree = "<group>";
@@ -147,7 +168,6 @@
 		9020A1B627DC088000DEBD79 /* partymon */ = {
 			isa = PBXGroup;
 			children = (
-				90FDF31C27DC256600F627BE /* Info.plist */,
 				9020A1B727DC088000DEBD79 /* partymonApp.swift */,
 				9020A1B927DC088000DEBD79 /* ContentView.swift */,
 				90FDF33227DC484700F627BE /* Data */,
@@ -158,6 +178,7 @@
 				90FDF32727DC3DAE00F627BE /* Gameboy */,
 				90FDF32627DC3DA500F627BE /* Background */,
 				9020A1BB27DC088100DEBD79 /* Assets.xcassets */,
+				90FDF31C27DC256600F627BE /* Info.plist */,
 				900FD61427DEA9E6006F9C3C /* GoogleService-Info.plist */,
 				90FDF31A27DC250C00F627BE /* PKMN_RBYGSC.ttf */,
 				9020A1BD27DC088100DEBD79 /* Preview Content */,
@@ -178,7 +199,7 @@
 			children = (
 				9020A1C627DC0D0700DEBD79 /* ColorManager.swift */,
 				9020A1D527DC1F7B00DEBD79 /* LayoutManager.swift */,
-				90FDF31D27DC26D400F627BE /* FontManager.swift */,
+				90FBE4B427DEDA4100191E8D /* FontManager.swift */,
 			);
 			path = Brand;
 			sourceTree = "<group>";
@@ -224,8 +245,8 @@
 				90F19D4E27DD22ED00144521 /* RestartView.swift */,
 				90FDF33527DC4EF900F627BE /* IntroView.swift */,
 				90F19D5227DD2C0700144521 /* ProgressView.swift */,
-				90F19D4C27DD212800144521 /* CapTable.swift */,
-				90FDF33727DC4F3400F627BE /* InvestDex.swift */,
+				90F19D4C27DD212800144521 /* CapTableView.swift */,
+				90FDF33727DC4F3400F627BE /* InvestDexView.swift */,
 				90FDF32B27DC42B600F627BE /* GameplayView.swift */,
 				900FD60E27DDB2F1006F9C3C /* NewInvestorView.swift */,
 			);
@@ -332,15 +353,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90FDF31E27DC26D400F627BE /* FontManager.swift in Sources */,
 				90FDF33C27DC614500F627BE /* InvestorItem.swift in Sources */,
 				900FD61A27DEAB2B006F9C3C /* Intro.swift in Sources */,
 				900FD61827DEAAB9006F9C3C /* Start.swift in Sources */,
+				900FD62627DEAEC8006F9C3C /* NewInvestor.swift in Sources */,
 				90FDF33127DC484400F627BE /* Store.swift in Sources */,
-				900FD61C27DEAB68006F9C3C /* Battle.swift in Sources */,
+				900FD61C27DEAB68006F9C3C /* Battles.swift in Sources */,
+				90FBE4B527DEDA4100191E8D /* FontManager.swift in Sources */,
 				9020A1BA27DC088000DEBD79 /* ContentView.swift in Sources */,
+				900FD62A27DEAF81006F9C3C /* InvestDex.swift in Sources */,
 				90FDF34127DD0CFE00F627BE /* AnimatedText.swift in Sources */,
-				90F19D4D27DD212800144521 /* CapTable.swift in Sources */,
+				90F19D4D27DD212800144521 /* CapTableView.swift in Sources */,
 				90F19D4F27DD22ED00144521 /* RestartView.swift in Sources */,
 				90F19D5127DD276000144521 /* MenuView.swift in Sources */,
 				9020A1C727DC0D0700DEBD79 /* ColorManager.swift in Sources */,
@@ -352,16 +375,21 @@
 				900FD60827DD41CA006F9C3C /* BattleIntro.swift in Sources */,
 				900FD60F27DDB2F1006F9C3C /* NewInvestorView.swift in Sources */,
 				9020A1D127DC1B4B00DEBD79 /* GameboyControls.swift in Sources */,
+				900FD62827DEAF42006F9C3C /* InvestorDetail.swift in Sources */,
+				900FD62427DEADA2006F9C3C /* CapTable.swift in Sources */,
 				900FD61127DEA059006F9C3C /* InvestorDetailView.swift in Sources */,
+				900FD62027DEAD3F006F9C3C /* Progress.swift in Sources */,
 				9020A1D627DC1F7B00DEBD79 /* LayoutManager.swift in Sources */,
 				900FD61327DEA3B9006F9C3C /* GetRarityColor.swift in Sources */,
 				9020A1CF27DC1A8100DEBD79 /* GameboyView.swift in Sources */,
 				90F19D5327DD2C0700144521 /* ProgressView.swift in Sources */,
 				900FD60627DD3FEE006F9C3C /* BattleView.swift in Sources */,
 				90FDF32F27DC44AC00F627BE /* GameButton.swift in Sources */,
-				90FDF33827DC4F3400F627BE /* InvestDex.swift in Sources */,
+				90FDF33827DC4F3400F627BE /* InvestDexView.swift in Sources */,
+				900FD62227DEAD5E006F9C3C /* Restart.swift in Sources */,
 				90FDF32C27DC42B600F627BE /* GameplayView.swift in Sources */,
 				900FD60B27DD41F6006F9C3C /* Battle.swift in Sources */,
+				900FD61E27DEAD23006F9C3C /* Menu.swift in Sources */,
 				90FDF33427DC48AF00F627BE /* State.swift in Sources */,
 				90FDF33E27DC660700F627BE /* InvestorModel.swift in Sources */,
 				900FD60D27DD4CC5006F9C3C /* Actions.swift in Sources */,
@@ -426,7 +454,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -481,7 +509,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -497,7 +525,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"partymon/Preview Content\"";
 				DEVELOPMENT_TEAM = HE452HL4WS;
 				ENABLE_PREVIEWS = YES;
@@ -509,6 +537,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -528,7 +557,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"partymon/Preview Content\"";
 				DEVELOPMENT_TEAM = HE452HL4WS;
 				ENABLE_PREVIEWS = YES;
@@ -540,6 +569,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

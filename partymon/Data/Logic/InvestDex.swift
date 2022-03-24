@@ -5,4 +5,18 @@
 //  Created by Tyler Cagle on 3/13/22.
 //
 
-import Foundation
+import SwiftUI
+
+extension Store {
+    func handleInvestDexLogic() {
+        switch (buttonPress) {
+        case .A:
+            gameState = .battle
+        case .start:
+            lastGameState = .investDex
+            gameState = .menu
+        default:
+            return
+        }
+    }
+}

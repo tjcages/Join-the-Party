@@ -12,7 +12,7 @@ struct BackgroundView: View {
     var body: some View {
         VStack(spacing: 0) {
             ColorGrid()
-                .frame(height: 264)
+                .frame(height: 344)
             
             ZStack(alignment: .top) {
                 Rectangle()
@@ -21,10 +21,13 @@ struct BackgroundView: View {
                 Image("danceGrid")
                     .resizable()
                     .aspectRatio(contentMode: .fill)
-                    .frame(height: 150)
+                    .frame(height: 100)
             }
-
+            .frame(width: UIScreen.main.bounds.size.width, height: 100, alignment: .center)
+            .clipped()
         }
+        .frame(height: 500, alignment: .bottom)
+        .frame(maxWidth: UIScreen.main.bounds.size.width)
     }
 }
 

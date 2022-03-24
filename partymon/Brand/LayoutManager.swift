@@ -14,12 +14,11 @@ extension CGFloat {
     static let medium = CGFloat(12)
     static let medium2 = CGFloat(16)
     static let large = CGFloat(24)
-    static let xLarge = CGFloat(36)
+    static let large2 = CGFloat(24)
+    static let xLarge = CGFloat(48)
     
     // layouts
-    static let borderRadiusLarge = CGFloat(24)
-    
-    
-    // font sizes
+    static let borderRadiusLarge = CGFloat(20)
+    static let borderRadiusSmall = CGFloat(12)
     
 }

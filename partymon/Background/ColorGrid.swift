@@ -32,7 +32,7 @@ struct ColorGrid: View {
                     VStack {
                         Rectangle().fill(Color.random)
                             .frame(height: size)
-                            .opacity(randomFloat >= 8 ? 0 : 1)
+                            .opacity(randomFloat >= 6 ? 0 : 1) // randomly remove some for the matrix effect
                     }
                 }
                 .offset(y: scrollAnimation ? -1200 : 0)
@@ -47,8 +47,9 @@ struct ColorGrid: View {
             
             Rectangle()
                 .fill(.black)
-                .opacity(0.6)
+                .opacity(0.4)
         }
+        .background(.black)
     }
 }
 

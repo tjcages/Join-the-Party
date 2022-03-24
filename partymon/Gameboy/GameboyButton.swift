@@ -13,12 +13,15 @@ struct GameboyButton: View {
     @State var pressed = false
     @State private var engine: CHHapticEngine?
     
+    var callback : () -> ()
+    
     let altText: String
     let image: String
     let buttonWidth: CGFloat
     let buttonHeight: CGFloat
     
-    init(type: String) {
+    init(type: String, _ callback: @escaping () -> Void) {
+        self.callback = callback
         self.altText = type
         
         switch(type) {
@@ -75,7 +78,7 @@ struct GameboyButton: View {
     
     var body: some View {
         Button {
-            print(altText)
+            callback()
         } label: {
             VStack {
                 Image(image)

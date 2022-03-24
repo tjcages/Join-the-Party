@@ -13,11 +13,9 @@ struct BattleView: View {
     var body: some View {
         switch (store.battleState) {
         case .intro:
-            HStack {
-                
-            }
-        case .battle:
-            
+            BattleIntro()
+        default:
+            Battle()
         }
     }
 }

@@ -8,9 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var store = DataStore()
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack(spacing: 0) {
+            GameboyView()
+            
+            GameboyControls()
+        }
     }
 }
 

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct GameboyControls: View {
+    @EnvironmentObject var store: DataStore
     
     let buttonSize: CGFloat = 72
     let numpadSize: CGFloat = 164
@@ -30,7 +31,9 @@ struct GameboyControls: View {
             .shadow(radius: 20)
             
             HStack {
-                GameboyNumpad()
+                GameboyNumpad() { direction in
+                    store.buttonPressed(button: direction)
+                }
                 
                 Spacer()
                 
@@ -38,24 +41,32 @@ struct GameboyControls: View {
                     HStack {
                         Spacer()
                         
-                        GameboyButton(type: "A")
+                        GameboyButton(type: "A") {
+                            store.buttonPressed(button: .A)
+                        }
                     }
                     
-                    GameboyButton(type: "B")
-                        .padding([.trailing], buttonSize)
+                    GameboyButton(type: "B") {
+                        store.buttonPressed(button: .B)
+                    }
+                    .padding([.trailing], buttonSize)
                 }
             }
             .padding([.leading, .trailing], .large)
             .padding([.bottom], .medium)
             
             HStack(alignment: .center, spacing: .xLarge) {
-                GameboyButton(type: "share")
+                GameboyButton(type: "share") {
+                    store.buttonPressed(button: .share)
+                }
                 
-                GameboyButton(type: "start")
+                GameboyButton(type: "start") {
+                    store.buttonPressed(button: .start)
+                }
             }
             .frame(maxWidth: .infinity)
             .padding([.bottom], .xLarge)
-                
+            
             Spacer()
         }
         .background(

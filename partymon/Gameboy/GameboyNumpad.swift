@@ -8,21 +8,15 @@
 import SwiftUI
 import CoreHaptics
 
-enum NumpadDirection {
-    case top
-    case left
-    case right
-    case bottom
-    case none
-}
-
 struct GameboyNumpad: View {
     
     let buttonWidth: CGFloat =  164
     let buttonHeight: CGFloat =  164
     let pressSize: CGFloat = 64
     
-    @State var pressDirection: NumpadDirection = .none
+    var callback : (ButtonState) -> ()
+    
+    @State var pressDirection: ButtonState = .none
     @State private var engine: CHHapticEngine?
     
     func prepareHaptics() {
@@ -70,6 +64,7 @@ struct GameboyNumpad: View {
                     
                     Button {
                         // top button pressed
+                        callback(.up)
                     } label: {
                         Rectangle()
                             .fill(.clear)
@@ -78,7 +73,7 @@ struct GameboyNumpad: View {
                     .simultaneousGesture(
                         DragGesture(minimumDistance: 0)
                             .onChanged({ _ in
-                                self.pressDirection = .top
+                                self.pressDirection = .up
                                 complexSuccess() // haptic feedback
                             })
                             .onEnded({ _ in
@@ -92,6 +87,7 @@ struct GameboyNumpad: View {
                 HStack {
                     Button {
                         // left button pressed
+                        callback(.left)
                     } label: {
                         Rectangle()
                             .fill(.clear)
@@ -112,6 +108,7 @@ struct GameboyNumpad: View {
                     
                     Button {
                         // right button pressed
+                        callback(.right)
                     } label: {
                         Rectangle()
                             .fill(.clear)
@@ -134,6 +131,7 @@ struct GameboyNumpad: View {
                     
                     Button {
                         // bottom button pressed
+                        callback(.down)
                     } label: {
                         Rectangle()
                             .fill(.clear)
@@ -142,7 +140,7 @@ struct GameboyNumpad: View {
                     .simultaneousGesture(
                         DragGesture(minimumDistance: 0)
                             .onChanged({ _ in
-                                self.pressDirection = .bottom
+                                self.pressDirection = .down
                                 complexSuccess() // haptic feedback
                             })
                             .onEnded({ _ in
@@ -154,8 +152,8 @@ struct GameboyNumpad: View {
                 }
             }
         }
-        .rotation3DEffect(.degrees(pressDirection == .top ? 10 : 0), axis: (x: 1, y: 0, z: 0))
-        .rotation3DEffect(.degrees(pressDirection == .bottom ? -10 : 0), axis: (x: 1, y: 0, z: 0))
+        .rotation3DEffect(.degrees(pressDirection == .up ? 10 : 0), axis: (x: 1, y: 0, z: 0))
+        .rotation3DEffect(.degrees(pressDirection == .down ? -10 : 0), axis: (x: 1, y: 0, z: 0))
         .rotation3DEffect(.degrees(pressDirection == .left ? -10 : 0), axis: (x: 0, y: 1, z: 0))
         .rotation3DEffect(.degrees(pressDirection == .right ? 10 : 0), axis: (x: 0, y: 1, z: 0))
         .onAppear(perform: prepareHaptics)

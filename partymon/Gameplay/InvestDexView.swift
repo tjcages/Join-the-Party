@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct InvestDex: View {
+struct InvestDexView: View {
     @EnvironmentObject var store: DataStore
     @State private var angle: Double = 0
     
@@ -76,8 +76,8 @@ struct InvestDex: View {
     }
 }
 
-struct InvestDex_Previews: PreviewProvider {
+struct InvestDexView_Previews: PreviewProvider {
     static var previews: some View {
-        InvestDex()
+        InvestDexView()
     }
 }

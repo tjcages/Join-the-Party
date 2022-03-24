@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CapTable: View {
+struct CapTableView: View {
     @EnvironmentObject var store: DataStore
     @State private var angle: Double = 0
     
@@ -61,7 +61,7 @@ struct CapTable: View {
             .background(Color.gbCasing)
             .cornerRadius(.borderRadiusLarge, corners: [.topLeft, .topRight])
         }
-        .background(.white)
+        .background(Color.white)
         .onAppear {
             withAnimation(animation) {
                 self.angle += 720
@@ -70,9 +70,9 @@ struct CapTable: View {
     }
 }
 
-struct CapTable_Previews: PreviewProvider {
+struct CapTableView_Previews: PreviewProvider {
     static var previews: some View {
-        CapTable()
+        CapTableView()
     }
 }
 
