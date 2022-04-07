@@ -36,6 +36,15 @@
 		9020A1D127DC1B4B00DEBD79 /* GameboyControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9020A1D027DC1B4B00DEBD79 /* GameboyControls.swift */; };
 		9020A1D427DC1F4E00DEBD79 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9020A1D327DC1F4E00DEBD79 /* Extensions.swift */; };
 		9020A1D627DC1F7B00DEBD79 /* LayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9020A1D527DC1F7B00DEBD79 /* LayoutManager.swift */; };
+		90ECC75D27FBCA1100D470E5 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90ECC75C27FBCA1100D470E5 /* LoadingView.swift */; };
+		90ECC75F27FBD00200D470E5 /* Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90ECC75E27FBD00200D470E5 /* Loading.swift */; };
+		90ECC76127FBE5ED00D470E5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90ECC76027FBE5ED00D470E5 /* User.swift */; };
+		90ECC76327FD3D2200D470E5 /* Completed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90ECC76227FD3D2200D470E5 /* Completed.swift */; };
+		90ECC76527FD3D7700D470E5 /* CompletedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90ECC76427FD3D7700D470E5 /* CompletedView.swift */; };
+		90ECC76927FD3F1500D470E5 /* ConfettiSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90ECC76827FD3F1500D470E5 /* ConfettiSwiftUI.swift */; };
+		90ECC76B27FD3F1800D470E5 /* RoundedCross.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90ECC76A27FD3F1800D470E5 /* RoundedCross.swift */; };
+		90ECC76D27FD3F1A00D470E5 /* SlimRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90ECC76C27FD3F1A00D470E5 /* SlimRectangle.swift */; };
+		90ECC76F27FD3F1C00D470E5 /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90ECC76E27FD3F1C00D470E5 /* Triangle.swift */; };
 		90F19D4D27DD212800144521 /* CapTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F19D4C27DD212800144521 /* CapTableView.swift */; };
 		90F19D4F27DD22ED00144521 /* RestartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F19D4E27DD22ED00144521 /* RestartView.swift */; };
 		90F19D5127DD276000144521 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F19D5027DD276000144521 /* MenuView.swift */; };
@@ -55,9 +64,13 @@
 		90FDF33C27DC614500F627BE /* InvestorItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FDF33B27DC614500F627BE /* InvestorItem.swift */; };
 		90FDF33E27DC660700F627BE /* InvestorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FDF33D27DC660700F627BE /* InvestorModel.swift */; };
 		90FDF34127DD0CFE00F627BE /* AnimatedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FDF34027DD0CFE00F627BE /* AnimatedText.swift */; };
+		EFD9B1142177B084AA2BF0EE /* Pods_partymon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5641D52A75697D8F08D2E3FF /* Pods_partymon.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F1205C979B2E6FF326B1C48 /* Pods-partymon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-partymon.release.xcconfig"; path = "Target Support Files/Pods-partymon/Pods-partymon.release.xcconfig"; sourceTree = "<group>"; };
+		5641D52A75697D8F08D2E3FF /* Pods_partymon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_partymon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		82F0E01C830A4AE5CD7F3CFB /* Pods-partymon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-partymon.debug.xcconfig"; path = "Target Support Files/Pods-partymon/Pods-partymon.debug.xcconfig"; sourceTree = "<group>"; };
 		900FD60527DD3FEE006F9C3C /* BattleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleView.swift; sourceTree = "<group>"; };
 		900FD60727DD41CA006F9C3C /* BattleIntro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleIntro.swift; sourceTree = "<group>"; };
 		900FD60A27DD41F6006F9C3C /* Battle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Battle.swift; sourceTree = "<group>"; };
@@ -88,6 +101,15 @@
 		9020A1D027DC1B4B00DEBD79 /* GameboyControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameboyControls.swift; sourceTree = "<group>"; };
 		9020A1D327DC1F4E00DEBD79 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		9020A1D527DC1F7B00DEBD79 /* LayoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutManager.swift; sourceTree = "<group>"; };
+		90ECC75C27FBCA1100D470E5 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		90ECC75E27FBD00200D470E5 /* Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loading.swift; sourceTree = "<group>"; };
+		90ECC76027FBE5ED00D470E5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		90ECC76227FD3D2200D470E5 /* Completed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Completed.swift; sourceTree = "<group>"; };
+		90ECC76427FD3D7700D470E5 /* CompletedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedView.swift; sourceTree = "<group>"; };
+		90ECC76827FD3F1500D470E5 /* ConfettiSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfettiSwiftUI.swift; sourceTree = "<group>"; };
+		90ECC76A27FD3F1800D470E5 /* RoundedCross.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCross.swift; sourceTree = "<group>"; };
+		90ECC76C27FD3F1A00D470E5 /* SlimRectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlimRectangle.swift; sourceTree = "<group>"; };
+		90ECC76E27FD3F1C00D470E5 /* Triangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
 		90F19D4C27DD212800144521 /* CapTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapTableView.swift; sourceTree = "<group>"; };
 		90F19D4E27DD22ED00144521 /* RestartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestartView.swift; sourceTree = "<group>"; };
 		90F19D5027DD276000144521 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
@@ -115,12 +137,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFD9B1142177B084AA2BF0EE /* Pods_partymon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		52416E2C0D65E61D3A3F02CB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				82F0E01C830A4AE5CD7F3CFB /* Pods-partymon.debug.xcconfig */,
+				0F1205C979B2E6FF326B1C48 /* Pods-partymon.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8BF40C0F12576E04901073D3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5641D52A75697D8F08D2E3FF /* Pods_partymon.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		900FD60927DD41CD006F9C3C /* Battle */ = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +185,8 @@
 				900FD62527DEAEC8006F9C3C /* NewInvestor.swift */,
 				900FD62727DEAF41006F9C3C /* InvestorDetail.swift */,
 				900FD62927DEAF81006F9C3C /* InvestDex.swift */,
+				90ECC75E27FBD00200D470E5 /* Loading.swift */,
+				90ECC76227FD3D2200D470E5 /* Completed.swift */,
 			);
 			path = Logic;
 			sourceTree = "<group>";
@@ -154,6 +196,8 @@
 			children = (
 				9020A1B627DC088000DEBD79 /* partymon */,
 				9020A1B527DC088000DEBD79 /* Products */,
+				52416E2C0D65E61D3A3F02CB /* Pods */,
+				8BF40C0F12576E04901073D3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -170,6 +214,7 @@
 			children = (
 				9020A1B727DC088000DEBD79 /* partymonApp.swift */,
 				9020A1B927DC088000DEBD79 /* ContentView.swift */,
+				90ECC77127FD3F2D00D470E5 /* Confetti */,
 				90FDF33227DC484700F627BE /* Data */,
 				90FDF33F27DC664900F627BE /* Models */,
 				9020A1D227DC1F4000DEBD79 /* Utilities */,
@@ -214,6 +259,25 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		90ECC77027FD3F2800D470E5 /* Shapes */ = {
+			isa = PBXGroup;
+			children = (
+				90ECC76A27FD3F1800D470E5 /* RoundedCross.swift */,
+				90ECC76C27FD3F1A00D470E5 /* SlimRectangle.swift */,
+				90ECC76E27FD3F1C00D470E5 /* Triangle.swift */,
+			);
+			path = Shapes;
+			sourceTree = "<group>";
+		};
+		90ECC77127FD3F2D00D470E5 /* Confetti */ = {
+			isa = PBXGroup;
+			children = (
+				90ECC76827FD3F1500D470E5 /* ConfettiSwiftUI.swift */,
+				90ECC77027FD3F2800D470E5 /* Shapes */,
+			);
+			path = Confetti;
+			sourceTree = "<group>";
+		};
 		90FDF32627DC3DA500F627BE /* Background */ = {
 			isa = PBXGroup;
 			children = (
@@ -245,6 +309,8 @@
 				90F19D4E27DD22ED00144521 /* RestartView.swift */,
 				90FDF33527DC4EF900F627BE /* IntroView.swift */,
 				90F19D5227DD2C0700144521 /* ProgressView.swift */,
+				90ECC75C27FBCA1100D470E5 /* LoadingView.swift */,
+				90ECC76427FD3D7700D470E5 /* CompletedView.swift */,
 				90F19D4C27DD212800144521 /* CapTableView.swift */,
 				90FDF33727DC4F3400F627BE /* InvestDexView.swift */,
 				90FDF32B27DC42B600F627BE /* GameplayView.swift */,
@@ -277,6 +343,7 @@
 			isa = PBXGroup;
 			children = (
 				90FDF33D27DC660700F627BE /* InvestorModel.swift */,
+				90ECC76027FBE5ED00D470E5 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -288,9 +355,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9020A1C227DC088100DEBD79 /* Build configuration list for PBXNativeTarget "partymon" */;
 			buildPhases = (
+				9D07FED51A9FDCB9F8053832 /* [CP] Check Pods Manifest.lock */,
 				9020A1B027DC088000DEBD79 /* Sources */,
 				9020A1B127DC088000DEBD79 /* Frameworks */,
 				9020A1B227DC088000DEBD79 /* Resources */,
+				E5EA27586E7545796583DDE6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -348,6 +417,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9D07FED51A9FDCB9F8053832 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-partymon-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E5EA27586E7545796583DDE6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-partymon/Pods-partymon-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-partymon/Pods-partymon-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-partymon/Pods-partymon-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9020A1B027DC088000DEBD79 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -355,24 +466,30 @@
 			files = (
 				90FDF33C27DC614500F627BE /* InvestorItem.swift in Sources */,
 				900FD61A27DEAB2B006F9C3C /* Intro.swift in Sources */,
+				90ECC76127FBE5ED00D470E5 /* User.swift in Sources */,
 				900FD61827DEAAB9006F9C3C /* Start.swift in Sources */,
 				900FD62627DEAEC8006F9C3C /* NewInvestor.swift in Sources */,
 				90FDF33127DC484400F627BE /* Store.swift in Sources */,
 				900FD61C27DEAB68006F9C3C /* Battles.swift in Sources */,
 				90FBE4B527DEDA4100191E8D /* FontManager.swift in Sources */,
 				9020A1BA27DC088000DEBD79 /* ContentView.swift in Sources */,
+				90ECC75D27FBCA1100D470E5 /* LoadingView.swift in Sources */,
 				900FD62A27DEAF81006F9C3C /* InvestDex.swift in Sources */,
+				90ECC75F27FBD00200D470E5 /* Loading.swift in Sources */,
 				90FDF34127DD0CFE00F627BE /* AnimatedText.swift in Sources */,
 				90F19D4D27DD212800144521 /* CapTableView.swift in Sources */,
 				90F19D4F27DD22ED00144521 /* RestartView.swift in Sources */,
 				90F19D5127DD276000144521 /* MenuView.swift in Sources */,
+				90ECC76527FD3D7700D470E5 /* CompletedView.swift in Sources */,
 				9020A1C727DC0D0700DEBD79 /* ColorManager.swift in Sources */,
 				90FDF32127DC2F4600F627BE /* GameboyButton.swift in Sources */,
+				90ECC76927FD3F1500D470E5 /* ConfettiSwiftUI.swift in Sources */,
 				90FDF33A27DC565300F627BE /* Share.swift in Sources */,
 				9020A1B827DC088000DEBD79 /* partymonApp.swift in Sources */,
 				90FDF32A27DC423400F627BE /* StartView.swift in Sources */,
 				9020A1D427DC1F4E00DEBD79 /* Extensions.swift in Sources */,
 				900FD60827DD41CA006F9C3C /* BattleIntro.swift in Sources */,
+				90ECC76F27FD3F1C00D470E5 /* Triangle.swift in Sources */,
 				900FD60F27DDB2F1006F9C3C /* NewInvestorView.swift in Sources */,
 				9020A1D127DC1B4B00DEBD79 /* GameboyControls.swift in Sources */,
 				900FD62827DEAF42006F9C3C /* InvestorDetail.swift in Sources */,
@@ -389,11 +506,14 @@
 				900FD62227DEAD5E006F9C3C /* Restart.swift in Sources */,
 				90FDF32C27DC42B600F627BE /* GameplayView.swift in Sources */,
 				900FD60B27DD41F6006F9C3C /* Battle.swift in Sources */,
+				90ECC76327FD3D2200D470E5 /* Completed.swift in Sources */,
 				900FD61E27DEAD23006F9C3C /* Menu.swift in Sources */,
+				90ECC76B27FD3F1800D470E5 /* RoundedCross.swift in Sources */,
 				90FDF33427DC48AF00F627BE /* State.swift in Sources */,
 				90FDF33E27DC660700F627BE /* InvestorModel.swift in Sources */,
 				900FD60D27DD4CC5006F9C3C /* Actions.swift in Sources */,
 				9020A1CB27DC153B00DEBD79 /* ColorGrid.swift in Sources */,
+				90ECC76D27FD3F1A00D470E5 /* SlimRectangle.swift in Sources */,
 				9020A1CD27DC1A3100DEBD79 /* BackgroundView.swift in Sources */,
 				90FDF32327DC327000F627BE /* GameboyNumpad.swift in Sources */,
 				90FDF33627DC4EF900F627BE /* IntroView.swift in Sources */,
@@ -521,6 +641,7 @@
 		};
 		9020A1C327DC088100DEBD79 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82F0E01C830A4AE5CD7F3CFB /* Pods-partymon.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -542,7 +663,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tylerj.partymon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -553,6 +674,7 @@
 		};
 		9020A1C427DC088100DEBD79 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F1205C979B2E6FF326B1C48 /* Pods-partymon.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -574,7 +696,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tylerj.partymon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

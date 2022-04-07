@@ -13,10 +13,17 @@ struct BattleIntro: View {
     let investorSize: CGFloat = 124
     
     var body: some View {
-        let investor = initialInvestors[store.capTableIndex]
-        let investorName = investor.name.components(separatedBy: " ").first ?? ""
+        let filteredCaptable = store.investors.filter { investor in
+            store.capTable.contains(investor.id)
+        }
+        let investor = filteredCaptable[store.capTableIndex]
         
-        let challenger = challengeInvestors[store.investDexIndex]
+        let filteredInvestors = store.investors.filter { investor in
+            !store.capTable.contains(investor.id)
+        }
+        let challenger = filteredInvestors[store.investDexIndex]
+        
+        let investorName = investor.name.components(separatedBy: " ").first ?? ""
         let challengerName = challenger.name.components(separatedBy: " ").first ?? ""
         
         VStack {
@@ -33,9 +40,9 @@ struct BattleIntro: View {
                             Color.prRed
                         }
                         .frame(width: investorSize, height: investorSize)
-                        .clipShape(RoundedRectangle(cornerRadius: 100))
+                        .clipShape(RoundedRectangle(cornerRadius: .borderRadiusLarge, style: .continuous))
                         .overlay(
-                            RoundedRectangle(cornerRadius: 100)
+                            RoundedRectangle(cornerRadius: .borderRadiusLarge, style: .continuous)
                                 .stroke(.white, lineWidth: 4)
                         )
                         
@@ -49,7 +56,7 @@ struct BattleIntro: View {
                                 .foregroundColor(.white)
                                 .padding([.top], .large)
                         }
-                        .padding([.top], investorSize * 2 - .xLarge)
+                        .padding([.top], investorSize * 2 - .medium2)
                     }
                 }
                 
@@ -61,9 +68,9 @@ struct BattleIntro: View {
                             Color.prRed
                         }
                         .frame(width: investorSize, height: investorSize)
-                        .clipShape(RoundedRectangle(cornerRadius: 100))
+                        .clipShape(RoundedRectangle(cornerRadius: .borderRadiusLarge, style: .continuous))
                         .overlay(
-                            RoundedRectangle(cornerRadius: 100)
+                            RoundedRectangle(cornerRadius: .borderRadiusLarge, style: .continuous)
                                 .stroke(.white, lineWidth: 4)
                         )
                         .rotation3DEffect(.degrees(180), axis: (x: 0, y: 1, z: 0))
@@ -78,7 +85,7 @@ struct BattleIntro: View {
                                 .foregroundColor(.white)
                                 .padding([.top], .large)
                         }
-                        .padding([.top], investorSize * 2 - .xLarge)
+                        .padding([.top], investorSize * 2 - .medium2)
                     }
                     
                     Spacer()

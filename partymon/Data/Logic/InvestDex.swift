@@ -15,6 +15,8 @@ extension Store {
         case .start:
             lastGameState = .investDex
             gameState = .menu
+        case .B:
+            gameState = .start
         default:
             return
         }

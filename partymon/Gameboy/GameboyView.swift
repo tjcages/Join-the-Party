@@ -11,13 +11,6 @@ struct GameboyView: View {
     
     var body: some View {
         VStack(spacing: 0) {
-//            Rectangle()
-//                .fill(LinearGradient(gradient: Gradient(colors: [.gbCasing, .black]), startPoint: .top, endPoint: .bottom))
-//                .border(width: 5, edges: [.bottom], color: .black)
-//                .frame(height: 124)
-//                .zIndex(1)
-//                .edgesIgnoringSafeArea(.top)
-            
             ZStack {
                 BackgroundView()
                 

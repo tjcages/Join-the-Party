@@ -10,45 +10,63 @@ import SwiftUI
 struct InvestorDetailView: View {
     @EnvironmentObject var store: DataStore
     
+    let imageSize: CGFloat = 200
     let animation = Animation.linear(duration: 2)
     let animation2 = Animation.linear(duration: 0)
     
     var body: some View {
-        let investor = initialInvestors[store.capTableIndex]
-        let investorName = investor.name.components(separatedBy: " ").first ?? ""
+        // set investors within the list
+        // make sure to filter only investors in the cap table
+        let filteredInvestors = store.investors.filter { investor in
+            store.capTable.contains(investor.id)
+        }
+        let index = store.capTableIndex < filteredInvestors.count ? store.capTableIndex : 0
+        let investor = filteredInvestors[index]
         
-        ZStack(alignment: .bottom) {
-            VStack {
-                AsyncImage(url: URL(string: investor.image)) { image in
-                    image.resizable()
-                } placeholder: {
-                    Color.prRed
-                }
-//                .frame(maxWidth: .infinity)
-                .aspectRatio(contentMode: .fill)
-            }
+        VStack {
+            Rectangle()
+                .fill(.clear)
+                .frame(height: 100)
             
-            VStack(alignment: .center, spacing: .medium) {
-                Text(investor.name)
-                    .font(.pkLarge)
-                    .foregroundColor(.white)
-                    .padding([.bottom], .small)
+            Spacer()
+        
+            AsyncImage(url: URL(string: investor.image)) { image in
+                image.resizable()
+            } placeholder: {
+                Color.prRed
+            }
+            .frame(width: imageSize, height: imageSize)
+            .clipShape(RoundedRectangle(cornerRadius: .borderRadiusLarge, style: .continuous))
+            
+            Spacer()
+            
+            VStack(alignment: .leading, spacing: .medium) {
+                HStack {
+                    Text(investor.name)
+                        .font(.pkLarge)
+                        .foregroundColor(.white)
+                    
+                    Spacer()
+                    
+                    Text(investor.rarity)
+                        .font(.pkSmall)
+                        .foregroundColor(.black)
+                        .padding([.vertical], 4)
+                        .padding([.horizontal], .medium)
+                        .background(getColor(rarity: Rarity(rawValue: investor.rarity) ?? .unknown))
+                }
+                .padding([.bottom], .large)
                 
-                Text(investor.rarity.rawValue)
-                    .font(.pkSmall)
-                    .foregroundColor(.black)
-                    .padding([.vertical], 4)
-                    .padding([.horizontal], .medium)
-                    .background(getColor(rarity: investor.rarity))
-                    .padding([.bottom], .medium)
+                GameButton("Set as lead investor", animation: animation2, selected: true)
                 
-                GameButton("Set \(investorName) as lead investor", animation: animation2, selected: true)
+                Rectangle()
+                    .fill(.clear)
+                    .frame(height: .small)
             }
             .padding(.large)
             .background(Color.gbCasing)
             .cornerRadius(.borderRadiusLarge, corners: [.topLeft, .topRight])
         }
-        .background(.white)
     }
 }
 

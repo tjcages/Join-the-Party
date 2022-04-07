@@ -21,7 +21,9 @@ extension Store {
         case .A:
             switch(restartState) {
             case .yes:
-                print("RESTARTING") // TO DO
+                removeAllInvestors()
+                capTableIndex = 0
+                investDexIndex = 0
                 gameState = .start
             case .no:
                 gameState = .start

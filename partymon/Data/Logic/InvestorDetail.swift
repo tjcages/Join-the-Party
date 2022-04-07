@@ -11,7 +11,7 @@ extension Store {
     func handleInvestorDetailLogic() {
         switch (buttonPress) {
         case .A:
-            print("SELECT THIS INVESTOR") // TO DO
+            gameState = lastGameState
         case .B:
             gameState = .capTable
         default:

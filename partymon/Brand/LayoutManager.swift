@@ -18,7 +18,7 @@ extension CGFloat {
     static let xLarge = CGFloat(48)
     
     // layouts
-    static let borderRadiusLarge = CGFloat(20)
-    static let borderRadiusSmall = CGFloat(12)
+    static let borderRadiusLarge = CGFloat(24)
+    static let borderRadiusSmall = CGFloat(10)
     
 }

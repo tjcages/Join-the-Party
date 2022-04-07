@@ -13,6 +13,8 @@ struct GameplayView: View {
     var body: some View {
         ZStack {
             switch store.gameState {
+            case .loading:
+                LoadingView()
             case .start:
                 StartView()
             case .intro:
@@ -33,6 +35,8 @@ struct GameplayView: View {
                 ProgressView()
             case .restart:
                 RestartView()
+            case .completed:
+                CompletedView()
             }
         }
         .zIndex(100)

@@ -33,6 +33,7 @@ enum ButtonState {
 }
 
 enum GameState {
+    case loading
     case start
     case intro
     case investDex
@@ -43,6 +44,13 @@ enum GameState {
     case battle
     case newInvestor
     case investorDetail
+    case completed
+}
+
+enum LoadingState {
+    case initializing
+    case starting
+    case ready
 }
 
 enum StartState {

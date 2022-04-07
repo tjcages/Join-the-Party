@@ -97,7 +97,7 @@ struct GameboyButton: View {
             DragGesture(minimumDistance: 0)
                 .onChanged({ _ in
                     self.pressed = true
-                    complexSuccess(intensity: image == "settingsButton" ? 0.5 : 0.7) // haptic feedback
+                    complexSuccess(intensity: image == "settingsButton" || image == "numpad" ? 0.5 : 0.7) // haptic feedback
                 })
                 .onEnded({ _ in
                     self.pressed = false

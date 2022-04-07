@@ -15,6 +15,13 @@ struct MenuView: View {
     
     private let animation = Animation.linear(duration: 0.2).delay(Double(Float.random(in: 3..<12))).repeatForever(autoreverses: false)
     
+    var versionNumber: String {
+        if let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
+            return version
+        }
+        return "1.0"
+    }
+    
     var body: some View {
         VStack(alignment: .center, spacing: 0) {
             Rectangle()
@@ -47,6 +54,12 @@ struct MenuView: View {
                 .padding(.medium)
             
             Spacer()
+            
+            Text("Beta \(versionNumber)")
+                .font(.pkMedium)
+                .foregroundColor(.textSecondary)
+                .multilineTextAlignment(.center)
+                .padding(.medium)
         }
         .background(Color.gbCasing)
     }

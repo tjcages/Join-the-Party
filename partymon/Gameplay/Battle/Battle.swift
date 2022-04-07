@@ -31,10 +31,17 @@ struct Battle: View {
     
     func handleUserAttack() {
         // perform attack and reduce opponent's health
-        let investor = initialInvestors[store.capTableIndex]
-        let attack = investor.attacks[store.battleIndex]
+        let filteredCaptable = store.investors.filter { investor in
+            store.capTable.contains(investor.id)
+        }
+        let investor = filteredCaptable[store.capTableIndex]
+        
+        let attackId = investor.attacks[store.battleIndex]
+        let attack = store.attacks.first { attack in
+            attack.id == attackId
+        }
         currentAttack = attack
-        challengerHealth -= attack.power
+        challengerHealth -= attack?.power ?? 20 // default value
         
         if (challengerHealth <= 0) {
             challengerHealth = 0
@@ -63,16 +70,34 @@ struct Battle: View {
     }
     
     func getRandomAttack() -> AttackModel {
-        let challenger = challengeInvestors[store.investDexIndex]
+        let filteredInvestors = store.investors.filter { investor in
+            !store.capTable.contains(investor.id)
+        }
+        let challenger = filteredInvestors[store.investDexIndex]
         let randomInt = Int.random(in: 0..<challenger.attacks.count - 1)
-        let attack = challenger.attacks[randomInt]
-        return attack
+        let attackId = challenger.attacks[randomInt]
+        let attack = store.attacks.first { attack in
+            attack.id == attackId
+        }
+        if let attack = attack {
+            // attack was loaded
+            return attack
+        } else {
+            // return basic attack
+            return AttackModel(id: "0", name: "Secret attack", power: 20)
+        }
     }
     
     var body: some View {
-        let investor = initialInvestors[store.capTableIndex]
-        let challenger = challengeInvestors[store.investDexIndex]
+        let filteredCaptable = store.investors.filter { investor in
+            store.capTable.contains(investor.id)
+        }
+        let investor = filteredCaptable[store.capTableIndex]
         
+        let filteredInvestors = store.investors.filter { investor in
+            !store.capTable.contains(investor.id)
+        }
+        let challenger = filteredInvestors[store.investDexIndex]
         
         VStack {
             Rectangle()
@@ -113,9 +138,9 @@ struct Battle: View {
                     Color.prRed
                 }
                 .frame(width: investorSize, height: investorSize)
-                .clipShape(RoundedRectangle(cornerRadius: 100))
+                .clipShape(RoundedRectangle(cornerRadius: .borderRadiusSmall))
                 .overlay(
-                    RoundedRectangle(cornerRadius: 100)
+                    RoundedRectangle(cornerRadius: .borderRadiusSmall)
                         .stroke(.white, lineWidth: 2)
                 )
                 .rotation3DEffect(.degrees(180), axis: (x: 0, y: 1, z: 0))
@@ -131,9 +156,9 @@ struct Battle: View {
                     Color.prRed
                 }
                 .frame(width: investorSize, height: investorSize)
-                .clipShape(RoundedRectangle(cornerRadius: 100))
+                .clipShape(RoundedRectangle(cornerRadius: .borderRadiusSmall))
                 .overlay(
-                    RoundedRectangle(cornerRadius: 100)
+                    RoundedRectangle(cornerRadius: .borderRadiusSmall)
                         .stroke(.white, lineWidth: 2)
                 )
                 

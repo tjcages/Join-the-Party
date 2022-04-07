@@ -34,8 +34,15 @@ struct Actions: View  {
     }
     
     var body: some View {
-        let investor = initialInvestors[store.capTableIndex]
-        let challenger = challengeInvestors[store.investDexIndex]
+        let filteredCaptable = store.investors.filter { investor in
+            store.capTable.contains(investor.id)
+        }
+        let investor = filteredCaptable[store.capTableIndex]
+        
+        let filteredInvestors = store.investors.filter { investor in
+            !store.capTable.contains(investor.id)
+        }
+        let challenger = filteredInvestors[store.investDexIndex]
         
         ZStack(alignment: .top) {
             Image("messageBackgroundInverted")
@@ -48,7 +55,12 @@ struct Actions: View  {
                     switch (store.battleState) {
                     case .battle:
                         ForEach(0..<investor.attacks.count, id: \.self) { i in
-                            GameButton(investor.attacks[i].name, animation: animation, selected: store.battleIndex == i)
+                            let attackId = investor.attacks[i]
+                            let attack = store.attacks.first { attack in
+                                attack.id == attackId
+                            }
+                            
+                            GameButton(attack?.name ?? "", animation: animation, selected: store.battleIndex == i)
                         }
                     case .attack:
                         AnimatedText("\(investor.name) used", color: .white, animation: animation)

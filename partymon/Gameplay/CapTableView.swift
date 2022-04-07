@@ -14,7 +14,7 @@ struct CapTableView: View {
     let logoSize: CGFloat = 56
     let animation = Animation.easeOut(duration: 2).delay(0.5)
     
-    let splitInvestors = initialInvestors.chunked(into: 3)
+    @State var splitInvestors: [[InvestorModel]]?
     
     var investorsShown: Int {
         var investorsShownStart = 0
@@ -50,9 +50,13 @@ struct CapTableView: View {
             .padding([.leading, .trailing], .medium2)
             
             VStack(alignment: .leading) {
-                ForEach(0..<splitInvestors[investorsShown].count) { i in
-                    let multiple = investorsShown * 3
-                    InvestorItem(investor: splitInvestors[investorsShown][i], random: false, selected: (store.capTableIndex - multiple) == i)
+                if let splitInvestors = splitInvestors, splitInvestors.count > 0 {
+                    ForEach(0..<splitInvestors[investorsShown].count, id: \.self) { i in
+                        let multiple = investorsShown * 3
+                        InvestorItem(investor: splitInvestors[investorsShown][i], random: false, selected: (store.capTableIndex - multiple) == i)
+                    }
+                } else {
+                    HStack{ Spacer() }
                 }
                 
                 Spacer()
@@ -63,6 +67,13 @@ struct CapTableView: View {
         }
         .background(Color.white)
         .onAppear {
+            // set investors within the list
+            // make sure to filter only investors in the cap table
+            let filteredInvestors = store.investors.filter { investor in
+                store.capTable.contains(investor.id)
+            }
+            splitInvestors = filteredInvestors.chunked(into: 3)
+            
             withAnimation(animation) {
                 self.angle += 720
             }

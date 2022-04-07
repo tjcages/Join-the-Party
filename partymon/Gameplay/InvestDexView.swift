@@ -14,7 +14,7 @@ struct InvestDexView: View {
     let logoSize: CGFloat = 56
     let animation = Animation.easeOut(duration: 2).delay(0.5)
     
-    let splitInvestors = challengeInvestors.chunked(into: 3)
+    @State var splitInvestors: [[InvestorModel]]?
     
     var investorsShown: Int {
         var investorsShownStart = 0
@@ -56,9 +56,13 @@ struct InvestDexView: View {
                 .padding(.medium)
             
             VStack(alignment: .leading) {
-                ForEach(0..<splitInvestors[investorsShown].count) { i in
-                    let multiple = investorsShown * 3
-                    InvestorItem(investor: splitInvestors[investorsShown][i], random: false, selected: (store.investDexIndex - multiple) == i)
+                if let splitInvestors = splitInvestors, splitInvestors.count > 0 {
+                    ForEach(0..<splitInvestors[investorsShown].count, id: \.self) { i in
+                        let multiple = investorsShown * 3
+                        InvestorItem(investor: splitInvestors[investorsShown][i], random: false, selected: (store.investDexIndex - multiple) == i)
+                    }
+                } else {
+                    HStack { Spacer() }
                 }
                 
                 Spacer()
@@ -69,6 +73,13 @@ struct InvestDexView: View {
         }
         .background(.white)
         .onAppear {
+            // set investors within the list
+            // make sure to filter out the current cap table first
+            let filteredInvestors = store.investors.filter { investor in
+                !store.capTable.contains(investor.id)
+            }
+            splitInvestors = filteredInvestors.chunked(into: 3)
+            
             withAnimation(animation) {
                 self.angle += 720
             }

@@ -22,9 +22,19 @@ extension Store {
                 introState = .choose
             case .choose:
                 introState = .selected
+                
+                // if investors haven't been loaded, try loading again
+                if (investors.count <= 1) {
+                    loadSession()
+                }
             case .selected:
                 // save currently selected investor
                 capTableIndex =  introInvestor
+                let initialInvestors = investors.filter { investor in investor.initial }
+                let investor =  initialInvestors[introInvestor]
+                self.addInvestor(id: investor.id)
+                
+                capTableIndex = 0
                 gameState = .investDex
             }
         case .B:

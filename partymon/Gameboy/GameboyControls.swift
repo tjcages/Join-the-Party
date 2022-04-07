@@ -18,7 +18,7 @@ struct GameboyControls: View {
             HStack(alignment: .center) {
                 Spacer()
                 
-                Text("party round")
+                Text("Party Round")
                     .font(Font.pkMedium)
                     .foregroundColor(.textSecondary)
                 
@@ -60,7 +60,7 @@ struct GameboyControls: View {
                     store.buttonPressed(button: .share)
                 }
                 
-                GameboyButton(type: "start") {
+                GameboyButton(type: "menu") {
                     store.buttonPressed(button: .start)
                 }
             }

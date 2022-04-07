@@ -17,7 +17,7 @@ struct ProgressView: View {
     let screenWidth: CGFloat = UIScreen.main.bounds.width
     
     var percentage: CGFloat {
-        return CGFloat(initialInvestors.count) / (CGFloat(initialInvestors.count) + CGFloat(challengeInvestors.count))
+        return CGFloat(store.capTable.count) / CGFloat(store.investors.count)
     }
     
     private let animation = Animation.linear(duration: 0.2).delay(Double(Float.random(in: 3..<12))).repeatForever(autoreverses: false)

@@ -64,7 +64,10 @@ struct IntroView: View {
                 
                 // chosen investor
                 if store.introState == .selected {
-                    let investor = initialInvestors[store.introInvestor]
+                    let initialInvestors = store.investors.filter { investor in investor.initial }
+                    let index = store.introInvestor < initialInvestors.count ? store.introInvestor : 0
+                    let investor =  initialInvestors[index]
+                    
                     var nameItems = investor.name.components(separatedBy: " ")
                     let lastName = nameItems.last?.prefix(1) ?? ""
                     let _ = nameItems.removeLast()
@@ -77,9 +80,9 @@ struct IntroView: View {
                             Color.prRed
                         }
                         .frame(width: 80, height: 80)
-                        .clipShape(RoundedRectangle(cornerRadius: 100))
+                        .clipShape(RoundedRectangle(cornerRadius: .borderRadiusSmall))
                         .overlay(
-                            RoundedRectangle(cornerRadius: 100)
+                            RoundedRectangle(cornerRadius: .borderRadiusSmall)
                                 .stroke(.white, lineWidth: 2)
                         )
                         
@@ -88,12 +91,12 @@ struct IntroView: View {
                             .foregroundColor(.white)
                             .padding([.trailing], .medium)
                         
-                        Text(investor.rarity.rawValue)
+                        Text(investor.rarity)
                             .font(.pkSmall)
                             .foregroundColor(.black)
                             .padding([.vertical], 4)
                             .padding([.horizontal], .medium)
-                            .background(getColor(rarity: investor.rarity))
+                            .background(getColor(rarity: Rarity(rawValue: investor.rarity) ?? .unknown))
                     }
                 }
                 
@@ -126,7 +129,7 @@ struct IntroView: View {
                                 
                                 AnimatedText("here, startups rule and investors", color: .textSecondary, animation: animation)
                                 
-                                AnimatedText("try to find the best companies.", color: .textSecondary, animation: animation2)
+                                AnimatedText("look for the next unicorn.", color: .textSecondary, animation: animation2)
                             }
                         case .cap:
                             VStack(alignment: .leading, spacing: .medium) {
@@ -152,9 +155,9 @@ struct IntroView: View {
                         case .selected:
                             VStack(alignment: .leading, spacing: .medium) {
                                 
-                                AnimatedText("great choice! now go out to fill", color: .textSecondary, animation: animation)
+                                AnimatedText("great choice! now go on to fill", color: .textSecondary, animation: animation)
                                 
-                                AnimatedText("the rest of your cap table", color: .textSecondary, animation: animation2)
+                                AnimatedText("the rest of your cap table.", color: .textSecondary, animation: animation2)
                             }
                         }
                     }

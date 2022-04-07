@@ -40,7 +40,7 @@ struct InvestorItem: View {
                         Color.prRed
                     }
                     .frame(width: logoSize, height: logoSize)
-                    .clipShape(RoundedRectangle(cornerRadius: 100))
+                    .clipShape(RoundedRectangle(cornerRadius: .borderRadiusSmall))
                 }
                 
                 VStack(alignment: .leading) {
@@ -50,6 +50,8 @@ struct InvestorItem: View {
                                 .font(.pkMedium2)
                                 .foregroundColor(.white)
                                 .padding([.trailing], .medium)
+                            
+                            Spacer()
                             
                             Text("unknown")
                                 .font(.pkSmall)
@@ -64,12 +66,14 @@ struct InvestorItem: View {
                                 .foregroundColor(.white)
                                 .padding([.trailing], .medium)
                             
-                            Text(investor.rarity.rawValue)
+                            Spacer()
+                            
+                            Text(investor.rarity)
                                 .font(.pkSmall)
                                 .foregroundColor(.black)
                                 .padding([.vertical], 4)
                                 .padding([.horizontal], .medium)
-                                .background(getColor(rarity: investor.rarity))
+                                .background(getColor(rarity: Rarity(rawValue: investor.rarity) ?? .unknown))
                         }
                     }
                     

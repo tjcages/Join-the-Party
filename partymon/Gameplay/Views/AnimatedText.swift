@@ -25,7 +25,7 @@ struct AnimatedText: View {
         Text(text)
             .font(.pkMedium)
             .foregroundColor(color)
-            .mask(Rectangle().offset(x: writing ? 0 : -324))
+            .mask(Rectangle().offset(x: writing ? 0 : -360))
             .onAppear {
                 withAnimation(animation) {
                     writing.toggle()

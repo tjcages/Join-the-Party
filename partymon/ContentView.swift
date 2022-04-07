@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject var store = DataStore()
+    @EnvironmentObject var store: DataStore
     
     var body: some View {
         VStack(spacing: 0) {
